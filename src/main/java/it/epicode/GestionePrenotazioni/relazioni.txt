@@ -1,0 +1,8 @@
+EDIFICIO 1 --- M POSTAZIONI
+un edificio può avere molte postazioni
+
+POSTAZIONE 1 --- M PRENOTAZIONI
+una postazione può essere prenotata più volte
+
+UTENTE 1 --- M PRENOTAZIONI
+un utente può fare molte prenotazioni

@@ -13,7 +13,7 @@ import java.time.LocalDate;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "Prenotazioni")
+@Table(name = "prenotazioni")
 public class Prenotazione {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

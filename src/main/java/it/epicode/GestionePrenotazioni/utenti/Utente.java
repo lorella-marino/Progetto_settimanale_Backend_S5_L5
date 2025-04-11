@@ -13,7 +13,7 @@ import java.util.Set;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "Utenti")
+@Table(name = "utenti")
 public class Utente {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

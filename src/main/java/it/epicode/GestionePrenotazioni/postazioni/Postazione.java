@@ -16,7 +16,7 @@ import java.util.Set;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "Postazioni")
+@Table(name = "postazioni")
 public class Postazione {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

@@ -7,21 +7,22 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
+import java.time.LocalDate;
+
 @Entity
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "Prenotazioni")
-
 public class Prenotazione {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
-    private String data;
-    @OneToMany
+    private LocalDate data;
+
+    @ManyToOne
     private Utente utente;
-    @OneToMany
+
+    @ManyToOne
     private Postazione postazione;
-
-
 }

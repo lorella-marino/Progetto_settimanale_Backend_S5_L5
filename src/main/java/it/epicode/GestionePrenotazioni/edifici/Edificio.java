@@ -1,16 +1,15 @@
 package it.epicode.GestionePrenotazioni.edifici;
 
-import it.epicode.GestionePrenotazioni.postazioni.Postazione;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.HashSet;
-import java.util.Set;
 
-@Data
+
 @Entity
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "Edifici")
@@ -22,8 +21,4 @@ public class Edificio {
     private String nome;
     private String indirizzo;
     private String citta;
-    @ManyToOne
-    private Set<Postazione> postazioni = new HashSet<>();;
-
-
 }

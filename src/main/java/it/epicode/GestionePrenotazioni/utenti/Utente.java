@@ -9,12 +9,11 @@ import lombok.NoArgsConstructor;
 import java.util.HashSet;
 import java.util.Set;
 
-@Data
 @Entity
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "Utente")
-
+@Table(name = "Utenti")
 public class Utente {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -22,8 +21,4 @@ public class Utente {
     private String username;
     private String nomeCompleto;
     private String email;
-    @ManyToOne
-    private Set<Prenotazione> prenotazioni = new HashSet<>();
-
-
 }

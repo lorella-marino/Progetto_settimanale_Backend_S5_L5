@@ -12,26 +12,25 @@ import lombok.NoArgsConstructor;
 import java.util.HashSet;
 import java.util.Set;
 
-@Data
 @Entity
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "Postazioni")
-
 public class Postazione {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     private String descrizione;
+
     @Enumerated(EnumType.STRING)
     private TipoPostazione tipoPostazione;
+
     private int numeroMassimoOccupanti;
-    @OneToMany
-    private Edificio edificio;
-    @Enumerated(EnumType.STRING)
-    private Disponibilita disponibilita;
+
     @ManyToOne
-    private Set<Prenotazione> prenotazione = new HashSet<>();;
+    private Edificio edificio;
 
-
+    @Enumerated(EnumType.STRING)
+    private Disponibilita disponibilita = Disponibilita.LIBERA;
 }
